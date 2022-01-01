@@ -8,10 +8,10 @@
       }
     },
     "color": {
-      "value": "#18bbff"
+      "value": "#0730f2"
     },
     "shape": {
-      "type": "circle",
+      "type": "image",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -20,26 +20,26 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
+        "src": "https://cdn.dribbble.com/users/1162077/screenshots/3792792/programmer.png",
         "width": 100,
         "height": 100
       }
     },
     "opacity": {
-      "value": 1,
+      "value": 0.5,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 3.329516570435515,
+        "speed": 1,
         "opacity_min": 0.1,
         "sync": false
       }
     },
     "size": {
-      "value": 36.076771369474265,
+      "value": 32.06824121731046,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 40,
         "size_min": 0.1,
         "sync": false
@@ -56,7 +56,7 @@
       "enable": true,
       "speed": 6,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,

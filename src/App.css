@@ -1,48 +1,342 @@
+#tsparticles {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #333;
+}
+#ts2 {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #fff;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&family=Shizuru&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+span {
+  font-size: 30px;
+}
+h1 {
+  font-size: 27px;
+}
+.container {
+  position: absolute;
+  margin-left: 10px;
+}
+.switch-checkbox {
+  background-color: red;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+}
+.footer {
+  margin-top: 60px;
+}
+h4 {
+  font-size: 20px;
+
+  font-family: "noto sans jp", sans-serif;
+}
+p {
+  font-weight: bold;
+}
+h3 {
+  font-weight: 600;
+}
+
+.switch > i {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(0, 123, 255);
+}
+input {
+  transform: translatex(-20px);
+  display: none;
+}
+
+.dark-mode {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  height: 600px;
+  width: 380px;
+  transition: background-color 0.25s ease-in-out;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.light-mode {
+  background: rgba(251, 247, 247, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #333;
+  height: 100%;
+  height: 600px;
+  width: 380px;
+  transition: background-color 0.25s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .App {
-    text-align: center;
+  text-align: center;
+
+  min-height: 100vh;
+  min-width: 100;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 80px;
+  width: 70px;
+  pointer-events: none;
+  margin-top: 20px;
+  border-radius: 50%;
+
+  animation: tes 2s infinite;
+}
+@keyframes tes {
+  0% {
+    border: 5px solid rgb(7, 71, 233);
+    box-shadow: 5px 5px 20px rgb(7, 71, 233), -5px -5px 20px rgb(7, 71, 233);
+  }
+
+  50% {
+    border: 5px solid rgb(81, 224, 210);
+    box-shadow: 5px 5px 20px rgb(81, 224, 210), -5px -5px 20px rgb(81, 224, 210);
+  }
+
+  100% {
+    border: 5px solid rgb(89, 0, 255);
+    box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+h3 {
+  text-transform: capitalize;
+}
+.text > span {
+  font-size: 22px;
+
+  font-family: "Noto Sans Jp", sans-serif;
+  text-transform: capitalize;
 }
 
-.App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.wrapper {
+  background-color: transparent;
+
+  height: 28px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  border-radius: 8px;
+  font-family: "Noto Sans Jp", sans-serif;
+  font-size: 15px;
+  justify-content: center;
+  margin-top: 0;
+}
+.words {
+  overflow: hidden;
 }
 
-.App-link {
-    color: #61dafb;
+.words span {
+  display: block;
+  height: 100%;
+  font-size: 20px;
+
+  font-family: "Noto Sans Jp", sans-serif;
+
+  color: #0e6ffc;
+  animation: spin_words 2s infinite;
+}
+@keyframes spin_words {
+  5% {
+    transform: translatey(-112%);
+  }
+
+  15% {
+    transform: translatey(-110%);
+  }
+  25% {
+    transform: translateY(-212%);
+  }
+  35% {
+    transform: translateY(-200%);
+  }
+  50% {
+    transform: translateY(-312%);
+    color: red;
+    padding-left: 5px;
+  }
+  60% {
+    transform: translateY(-300%);
+    padding-left: 0px;
+  }
+  70% {
+    transform: translateY(-412%);
+  }
+
+  80% {
+    transform: translateY(-400%);
+    color: orange;
+  }
+  90% {
+    transform: translateY(-512%);
+  }
+  100% {
+    transform: translateY(-500%);
+  }
+}
+p {
+  font-size: 20px;
+}
+.content {
+  height: 200px;
+  width: 100%;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.btn {
+  width: 350px;
+  border-radius: 10px;
+  border: 3px solid #0e6ffc;
+
+  height: 50px;
+
+  margin-top: 10px;
+  font-size: 20px;
+  padding-left: -12px;
+  cursor: pointer;
+
+  text-align: center;
+  background: transparent;
+  animation: glow 1s infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
+
+  50% {
+    box-shadow: 5px 5px 20px rgb(81, 224, 210), -5px -5px 20px rgb(81, 224, 210);
+  }
+  100% {
+    box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
 }
 
-#tsparticles {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    z-index: -1;
+.fa-whatsapp {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.fa-instagram {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.fa-telegram {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.btn:hover {
+  color: blue;
+
+  padding-right: 12px;
+
+  border: 1px solid rgba(8, 8, 247, 0.893);
+}
+.btn::before {
+  content: "";
+  background-image: comic-gradient(#ff0052 20deg, transparent 120deg);
+}
+.btn:active {
+  background-color: red;
+  border: none;
+}
+.footer > p {
+  font-family: "Shizuru", cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+.fa-facebook {
+  padding-right: 5px;
+}
+.fa-arrow-alt-circle-up {
+  color: #0e6ffc;
+  padding-right: 5px;
+  margin-left: -12px;
+}
+.fa-arrow-alt-circle-up:hover {
+  transform: translateY(-5px);
+  color: orangered;
+}
+h4:hover {
+  color: red;
+}
+.first {
+  color: #0e6ffc;
+  font-size: 22px;
+}
+a {
+  text-decoration: none;
+}
+
+.buton {
+  position: absolute;
+  margin-left: 12%;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: 2px solid #0e6ffc;
+  text-decoration: none;
+  color: #0e6ffc;
+}
+
+.fa-share {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.buton:hover {
+  background-color: #0e6ffc;
+  color: #fff;
+}
+.switch-checkbox:hover {
+  background-color: #ff0052;
 }
